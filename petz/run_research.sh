@@ -16,8 +16,8 @@
 cd "$(dirname "$0")/" || exit
 
 DEFAULT_IMAGE=quantconnect/research:latest
-DEFAULT_DATA_DIR=../Data
-DEFAULT_NOTEBOOK_DIR=./Notebooks/
+DEFAULT_DATA_DIR=./data/QCData
+DEFAULT_NOTEBOOK_DIR=./algo/python/momentum
 CONTAINER_NAME=LeanResearch
 
 yes_or_no() {

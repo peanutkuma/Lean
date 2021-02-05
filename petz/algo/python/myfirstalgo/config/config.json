@@ -1,29 +1,22 @@
-{
-  // this configuration file works by first loading all top-level
-  // configuration items and then will load the specified environment
-  // on top, this provides a layering affect. environment names can be
-  // anything, and just require definition in this file. There's
-  // two predefined environments, 'backtesting' and 'live', feel free
-  // to add more!
+{//
+  // This is a custom configruation file for backtesting python algorithms 
+  // adapted from `Lean/Launcher/config.json`
 
-  "environment": "backtesting", // "live-paper", "backtesting", "live-interactive", "live-interactive-iqfeed"
+  "environment": "backtesting",
 
   // algorithm class selector
-  "algorithm-type-name": "BasicTemplateFrameworkAlgorithm",
-
-  // Algorithm language selector - options CSharp, Python
-  //"algorithm-language": "CSharp",
   "algorithm-language": "Python",
 
-  //Physical DLL location
-  // "algorithm-location": "QuantConnect.Algorithm.CSharp.dll",
-  "algorithm-location": "./Algorithm.Python/BasicTemplateFrameworkAlgorithm.py",
+  // algorithm settings
+  "algorithm-type-name": "main",
+  "algorithm-location": "./algo/python/myfirstalgo/main.py",
+  "results-destination-folder": "./algo/python/myfirstalgo/results",
+  "data-folder": "/home/kenny/_workspaces/finanz/myrepos/peanutkuma/Lean/petz/data/QCData",
 
   //Research notebook
-  "composer-dll-directory": ".",
+  //"composer-dll-directory": "/home/kenny/_workspaces/finanz/myrepos/peanutkuma/Lean/petz/research",
 
   // engine
-  "data-folder": "./Data/",
 
   // debugging configuration - options for debugging-method LocalCmdLine, VisualStudio, PTVSD, PyCharm
   "debugging": false,
